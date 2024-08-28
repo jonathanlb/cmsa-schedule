@@ -76,8 +76,16 @@ function addEvent(elt, event) {
   }
   eventDiv.on('mouseleave', hideDetails)
 
+  // Make selection sticky between visits
+  const lsEventKey = 'event-title-' + event.title
+  let isSelected = localStorage.getItem(lsEventKey) || false
   function highlightEventEntry() {
+    isSelected != isSelected
+    localStorage.setItem(lsEventKey, isSelected)
     eventDiv.toggleClass('program-event-selected')
+  }
+  if (isSelected) {
+    highlightEventEntry()
   }
   eventDiv.on('dblclick', highlightEventEntry)
 }
