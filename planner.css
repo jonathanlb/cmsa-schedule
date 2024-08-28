@@ -1,0 +1,76 @@
+/* Event-code popup. */
+span .event-code-description {
+  display: none;
+}
+
+span:hover .event-code {
+  display: none;
+}
+
+span:hover .event-code-description {
+  display: inline;
+  font-weight: bold;
+}
+
+.event-codes {
+  border-color: grey;
+  border-style: solid;
+  border-width: 0.05rem 0rem 0rem 0rem;
+  padding-top: .25rem;
+  margin-top: .25rem;
+}
+
+.event-description {
+  border-color: grey;
+  border-style: solid;
+  border-width: 0.05rem 0rem 0rem 0rem;
+  padding-top: .25rem;
+  margin-top: .25rem;
+}
+
+.event-presenter {
+  font-weight: bold;
+}
+
+.event-title {
+  font-style: italic;
+}
+
+.program-datetime-row {
+  background-color: aquamarine;
+  border-color: grey;
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 0.15rem;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  font-size: larger;
+  font-weight: bold;
+  padding: 0.25rem 0.0rem 0.25rem 0.5rem;
+  width: 100%;
+}
+
+.program-div {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+}
+
+.program-event-details {
+  display: none;
+}
+
+.program-event-entry {
+  border-color: grey;
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 0.15rem;
+  margin: 0.25rem;
+  padding: 0.5rem;
+}
+
+.program-event-selected {
+  border-color: black;
+  border-style: dashed;
+  border-width: 0.25rem;
+  margin: 0.0rem;
+}
