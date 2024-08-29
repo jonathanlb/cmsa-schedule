@@ -48,7 +48,8 @@ function addDateTimeRow(elt, dateTime) {
 }
 
 function addEvent(elt, event) {
-  let eventDiv = '<div class=\'program-event-entry\'>'
+  const rowClass = dateTimeToClass(event.dateTime)
+  let eventDiv = `<div class='program-event-entry ${rowClass}'>`
   eventDiv += `<div class="event-title">${event.title}</div>`
   eventDiv += `<div class="event-presenter">${event.presenter}</div>`
   eventDiv += `<div class="event-location">${event.location}</div>`
@@ -66,13 +67,20 @@ function addEvent(elt, event) {
 
   eventDiv.append(detailsDiv)
 
+  // expand entry, hiding the others in the same row (w/ same dateTime)
   const showDetails = () => {
       detailsDiv.show()
+      elt.find(`.${rowClass}`).hide()
+      eventDiv.show()
+      eventDiv.toggleClass('expanded-event-description')
   }
   eventDiv.on('mouseenter', showDetails)
 
+  // restore the row
   const hideDetails = () => {
       detailsDiv.hide()
+      eventDiv.toggleClass('expanded-event-description')
+      elt.find(`.${rowClass}`).show()
   }
   eventDiv.on('mouseleave', hideDetails)
 
@@ -88,4 +96,8 @@ function addEvent(elt, event) {
     highlightEventEntry()
   }
   eventDiv.on('dblclick', highlightEventEntry)
+}
+
+function dateTimeToClass(dateTime) {
+  return dateTime.replace(/[, \-:\(\)]/g, '_')
 }

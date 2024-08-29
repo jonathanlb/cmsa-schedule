@@ -28,6 +28,12 @@ span:hover .event-code-description {
   margin-top: .25rem;
 }
 
+.expanded-event-description {
+  grid-column-end: 4;
+  grid-column-start: 1;
+  width: 100%;
+}
+
 .event-presenter {
   font-weight: bold;
 }
