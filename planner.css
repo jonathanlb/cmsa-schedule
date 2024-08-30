@@ -28,6 +28,12 @@ span:hover .event-code-description {
   margin-top: .25rem;
 }
 
+.event-filter-group {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem;
+}
+
 .expanded-event-description {
   grid-column-end: 4;
   grid-column-start: 1;
@@ -40,6 +46,11 @@ span:hover .event-code-description {
 
 .event-title {
   font-style: italic;
+}
+
+.plenary-event {
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .program-datetime-row {

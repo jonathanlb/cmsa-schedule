@@ -6,10 +6,46 @@
 </head>
 
 <body>
+  <div class="event-filter-group">
+    <fieldset>
+      <legend>Choose events to list:</legend>
+
+      <div>
+        <input type="radio" id="all-events" name="event-filter" value="all" checked />
+        <label for="all-events">All Events</label>
+      </div>
+
+      <div>
+        <input type="radio" id="plenary-events" name="event-filter" value="plenary" />
+        <label for="plenary-events">Plenary Events</label>
+      </div>
+
+      <div>
+        <input type="radio" id="workshop-events" name="event-filter" value="workshop" />
+        <label for="workshop-events">Workshops</label>
+      </div>
+
+      <div>
+        <input type="radio" id="evening-performances" name="event-filter" value="evening-performance" />
+        <label for="evening-performances">Evening Performances</label>
+      </div>
+    </fieldset>
+  </div>
+
   <div id="workshop-planner-div" class="program-div"></div>
   <script src="https://cdn.jsdelivr.net/npm/cash-dom/dist/cash.min.js"></script>
   <script src="planner.js"></script>
   <script>
+
+    function filterSelectedEvents(program) {
+      const eventFilter = $('.event-filter-group input:checked').val()
+      if (eventFilter == 'all') {
+        return program
+      } else {
+        return program.filter(e => e.sessionType == eventFilter)
+      }
+    }
+
     const workshopProgram = [
       {
         dateTime: 'Tuesday, October 29, Evening (Pre-Convention)',
@@ -20,6 +56,7 @@
         codes: ['L/D', 'P', 'H', 'M', 'AL'],
         location: 'Regency A',
         sessionType: 'workshop',
+        plenary: true,
       },
       {
         dateTime: 'Wednesday, October 30, Morning (Pre-Convention)',
@@ -133,6 +170,15 @@
         sessionType: 'workshop',
       },
       {
+        dateTime: 'Thursday, October 31, 8:00 - 10:00 PM',
+        title: 'Evening Concert',
+        presenter: 'Charlotte Kaiser and René Izquierdo',
+        description: 'Program to be announced',
+        location: 'Grand Ballroom',
+        sessionType: 'evening-performance',
+        plenary: true,
+      },
+      {
         dateTime: 'Friday, November 1, 10:00 – 11:15 AM',
         title: 'Large Instrument Technique, Version 2.0',
         type: 'Solo',
@@ -193,6 +239,15 @@
         sessionType: 'workshop',
       },
       {
+        dateTime: 'Friday, November 1, 8:00 - 10:00 PM',
+        title: 'Evening Concert',
+        presenter: 'Rochester Mandolin Orchestra, Charlotte Kaiser, and Carlo Aonzo',
+        description: 'Program to be announced',
+        location: 'Grand Ballroom',
+        sessionType: 'evening-performance',
+        plenary: true,
+      },
+      {
         dateTime: 'Saturday, November 2, 10:00 – 11:15 AM',
         title: 'Carlo Munier’s Capricci-Studi op. 17',
         type: 'Solo',
@@ -222,9 +277,23 @@
         location: 'Susan B. Anthony',
         sessionType: 'workshop',
       },
+      {
+        dateTime: 'Saturday, November 2, 8:00 - 10:00 PM',
+        title: 'Evening Concert',
+        presenter: 'CMSA En Masse Orchestra, Carlo Aonzo and René Izquierdo',
+        description: 'Program to be announced',
+        location: 'Grand Ballroom',
+        sessionType: 'evening-performance',
+        plenary: true,
+      },
     ]
 
-    populatePlanner('#workshop-planner-div', workshopProgram)
+    $('.event-filter-group input').
+      on('click', (e) => {
+        populatePlanner('#workshop-planner-div', filterSelectedEvents(workshopProgram))
+      });
+
+    populatePlanner('#workshop-planner-div', filterSelectedEvents(workshopProgram))
   </script>
 </body>
 

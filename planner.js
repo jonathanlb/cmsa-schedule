@@ -1,5 +1,6 @@
 function populatePlanner(divId, schedule) {
   const elt = $(divId)
+  elt.empty()
   let column = 0
 
   let workingDT = ''
@@ -56,12 +57,20 @@ function addEvent(elt, event) {
   eventDiv += '</div>'
   eventDiv = $(eventDiv)
 
+  if (event.plenary) {
+    eventDiv.addClass('plenary-event')
+  }
+
   elt.append(eventDiv)
 
   let detailsDiv = '<div class="program-event-details">'
   detailsDiv += `<div class="event-description">${event.description}</div>`
-  detailsDiv += `<div>${event.type}</div>`
-  detailsDiv += addCodes(event.codes)
+  if (event.type) {
+    detailsDiv += `<div>${event.type}</div>`
+  }
+  if (event.codes && event.codes.length > 0) {
+    detailsDiv += addCodes(event.codes)
+  }
   detailsDiv += '</div>'
   detailsDiv = $(detailsDiv)
 
