@@ -36,10 +36,12 @@ const eventCode2Desc = {
 
 function addCodes(codes) {
   let div = '<div class="event-codes">'
-  codes.forEach(i => {
-    div += `<span><span class="event-code">${i}</span><span class="event-code-description">${eventCode2Desc[i]}</span></span>, `
-  })
-  div = div.slice(0, -2) // trailing ', '
+  if (codes && codes.length > 0) {
+    codes.forEach(i => {
+      div += `<span><span class="event-code">${i}</span><span class="event-code-description">${eventCode2Desc[i]}</span></span>, `
+    })
+    div = div.slice(0, -2) // trailing ', '
+  }
   div += '</div>'
   return div
 }

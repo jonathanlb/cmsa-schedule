@@ -28,6 +28,12 @@ span:hover .event-code-description {
   margin-top: .25rem;
 }
 
+.event-fieldset {
+  border-color: grey;
+  border-style: solid;
+  border-width: 1px;
+}
+
 .event-filter-group {
   display: flex;
   justify-content: flex-end;
