@@ -97,3 +97,28 @@ span:hover .event-code-description {
   border-width: 0.25rem;
   margin: 0.0rem;
 }
+
+.description-program-div {
+  text-align: center;
+}
+
+.description-program-div h2 {
+  text-align: left;
+}
+
+.program-list {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.program-list dt {
+  padding-bottom: 0.75rem;
+  width: 70%;
+}
+
+.program-list dd {
+  margin-left: auto;
+  padding-bottom: 0.75rem;
+  width: 30%;
+}
