@@ -60,7 +60,7 @@ function addEvent(elt, event) {
   eventDiv = $(eventDiv)
 
   if (event.plenary) {
-    eventDiv.addClass('plenary-event')
+    eventDiv.addClass('expanded-event-description')
   }
 
   elt.append(eventDiv)
@@ -83,14 +83,18 @@ function addEvent(elt, event) {
       detailsDiv.show()
       elt.find(`.${rowClass}`).hide()
       eventDiv.show()
-      eventDiv.toggleClass('expanded-event-description')
+      if (!event.plenary) {
+        eventDiv.toggleClass('expanded-event-description')
+      }
   }
   eventDiv.on('mouseenter', showDetails)
 
   // restore the row
   const hideDetails = () => {
       detailsDiv.hide()
-      eventDiv.toggleClass('expanded-event-description')
+      if (!event.plenary) {
+        eventDiv.toggleClass('expanded-event-description')
+      }
       elt.find(`.${rowClass}`).show()
   }
   eventDiv.on('mouseleave', hideDetails)

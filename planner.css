@@ -54,11 +54,6 @@ span:hover .event-code-description {
   font-style: italic;
 }
 
-.plenary-event {
-  grid-column-start: 1;
-  grid-column-end: 4;
-}
-
 .program-datetime-row {
   background-color: aquamarine;
   border-color: grey;
