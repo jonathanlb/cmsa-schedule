@@ -49,6 +49,17 @@
 
     const workshopProgram = [
       {
+        dateTime: 'Tuesday, October 29, noon - 6pm (8am-6pm Wed - Sat)',
+        title: 'Registration',
+        type: '',
+        presenter: '',
+        description: 'Drop by, say hello, and pick up your badge and packets.  We\'re here all through the convention to answer questions, too!',
+        codes: [],
+        location: 'Frederick Douglas Foyer',
+        sessionType: 'plenary',
+        plenary: true,
+      },
+      {
         dateTime: 'Tuesday, October 29, Evening (Pre-Convention)',
         title: 'Mandolin Pre-Convention Workshop, Part One',
         type: 'Solo',
@@ -110,8 +121,56 @@
         sessionType: 'workshop',
       },
       {
+        dateTime: 'Wednesday, October 30, 3:00 - 5:30 PM',
+        title: 'En Masse Orchestra Rehearsal #1',
+        type: '',
+        presenter: 'Dr. Jim Bates',
+        description: 'En Masse rehearsal led by Dr. Jim Bates.',
+        codes: [],
+        location: 'Grand Ballroom C',
+        sessionType: 'plenary',
+        plenary: true,
+      },
+      {
+        dateTime: 'Wednesday, October 30, 8:00 - 9:45 PM',
+        title: 'Welcome Party',
+        type: '',
+        presenter: '',
+        description: 'Come to see your old best friends or meet your new best friends.  There will be appetizers and a cash bar.',
+        codes: [],
+        location: 'Main Street Gallery',
+        sessionType: 'plenary',
+        plenary: true,
+      },
+      {
+        dateTime: 'Wednesday, October 30, 10:00 PM -- ??',
+        title: 'Choro Roda',
+        type: '',
+        presenter: '',
+        description: 'Open jam session.  Come to play or listen.',
+        codes: [],
+        location: 'Susan B. Anthony',
+        sessionType: 'plenary',
+        plenary: true,
+      },
+      {
+        dateTime: 'Thursday, October 31, 8:30 - 9:45 AM',
+        title: 'Sectional Rehearsals',
+        type: '',
+        presenter: '',
+        description: '<ul><li>Mandolin 1 – Grand Ballroom E</li>' +
+          '<li>Mandolin 2 – Grand Ballroom A</li>' +
+          '<li>Mandola – Regency A</li>' +
+          '<li>Octave Mandolin – Regency C</li>' +
+          '<li>Mandocello – Grand Ballroom G</li>' +
+          '<li>Guitar - Susan B. Anthony</li></ul>',
+        codes: ['AI'],
+        location: '<i>location:</i> see description',
+        plenary: true,
+        sessionType: 'plenary',
+      },
+      {
         dateTime: 'Thursday, October 31, 10:00 - 11:15 AM',
-
         title: 'The most important Mandolinist of history',
         type: 'History',
         presenter: 'Carlo Aonzo',
@@ -139,6 +198,17 @@
         codes: ['L/D', 'P', 'H', 'AI', 'AL'],
         location: 'Susan B. Anthony',
         sessionType: 'workshop',
+      },
+      {
+        dateTime: 'Thursday, October 31, 11:30 AM - 1:00 PM',
+        title: 'Open Mic',
+        type: '',
+        presenter: '',
+        description: '<a href="https://classicalmandolinsociety.org/open-mic-sign-up/" target="_blank">Sign up to perform on-line.</a>  Box-lunch reservations will be available here and on Yapp.',
+        codes: ['AI'],
+        location: 'Grand Ballroom B',
+        plenary: true,
+        sessionType: 'plenary',
       },
       {
         dateTime: 'Thursday, October 31, 1:15 - 2:30 PM',
@@ -171,6 +241,17 @@
         sessionType: 'workshop',
       },
       {
+        dateTime: 'Thursday, October 31, 2:45 - 5:45 PM',
+        title: 'En Masse Orchestra Rehearsal #2',
+        type: '',
+        presenter: 'Dr. Jim Bates',
+        description: 'En Masse rehearsal led by Dr. Jim Bates.',
+        codes: [],
+        location: 'Grand Ballroom C',
+        sessionType: 'plenary',
+        plenary: true,
+      },
+      {
         dateTime: 'Thursday, October 31, 8:00 - 10:00 PM',
         title: 'Evening Concert',
         type: '',
@@ -194,6 +275,33 @@
         location: 'Grand Ballroom',
         sessionType: 'evening-performance',
         plenary: true,
+      },
+      {
+        dateTime: 'Thursday, October 31, 10:30 PM -- ??',
+        title: 'Irish Session',
+        type: '',
+        presenter: '',
+        description: 'Open jam session.  Come to play, dance, or listen.',
+        codes: [],
+        location: 'Susan B. Anthony',
+        sessionType: 'plenary',
+        plenary: true,
+      },
+      {
+        dateTime: 'Friday, November 1, 8:30 - 9:45 AM',
+        title: 'Sectional Rehearsals',
+        type: '',
+        presenter: '',
+        description: '<ul><li>Mandolin 1 – Grand Ballroom E</li>' +
+          '<li>Mandolin 2 – Grand Ballroom A</li>' +
+          '<li>Mandola – Regency A</li>' +
+          '<li>Octave Mandolin – Regency C</li>' +
+          '<li>Mandocello – Grand Ballroom G</li>' +
+          '<li>Guitar - Susan B. Anthony</li></ul>',
+        codes: ['AI'],
+        location: '<i>location:</i> see description',
+        plenary: true,
+        sessionType: 'plenary',
       },
       {
         dateTime: 'Friday, November 1, 10:00 – 11:15 AM',
@@ -226,6 +334,17 @@
         sessionType: 'workshop',
       },
       {
+        dateTime: 'Friday, November 1, 11:30AM – 1:30 PM',
+        title: 'Gala Banquet',
+        type: '',
+        presenter: '',
+        description: '',
+        codes: [],
+        location: 'Main Street Gallery',
+        sessionType: 'plenary',
+        plenary: true,
+      },
+      {
         dateTime: 'Friday, November 1, 1:45 – 3:00 PM',
         title: 'Technique in contemporary classical mandolin music',
         type: 'Solo',
@@ -256,6 +375,17 @@
         sessionType: 'workshop',
       },
       {
+        dateTime: 'Friday, November 1, 3:15 - 5:30 PM',
+        title: 'En Masse Orchestra Rehearsal #3',
+        type: '',
+        presenter: 'Dr. Jim Bates',
+        description: 'En Masse rehearsal led by Dr. Jim Bates.',
+        codes: [],
+        location: 'Grand Ballroom C',
+        sessionType: 'plenary',
+        plenary: true,
+      },
+      {
         dateTime: 'Friday, November 1, 8:00 - 10:00 PM',
         title: 'Evening Concert',
         type: '',
@@ -267,7 +397,7 @@
           '<dt>Persephonia II</dt><dd>James Kellaris (b. 1956)</dd>' +
           '<dt>Mr. Sandman</dt><dd>Pat Ballard (1899–1960), arr. K. Luk</dd>' +
           '<dt>Triomphe d’Orphee</dt><dd>Manuel Burges (1874-1945)</dd>' +
-          '<dt>Feels So Goode</dt><dd> C. Mangione (b. 1940), arr. J. Hobbs</dd>' +
+          '<dt>Feels So Good</dt><dd> C. Mangione (b. 1940), arr. J. Hobbs</dd>' +
           '<dt>Potatisvalse</dt><dd> Ale Möller (b. 1955), arr. B. Ford</dd>' +
           '</dl>\n' +
           '(pause)\n' +
@@ -288,6 +418,33 @@
         location: 'Grand Ballroom',
         sessionType: 'evening-performance',
         plenary: true,
+      },
+      {
+        dateTime: 'Friday, November 1, 10:30 PM -- ??',
+        title: 'Folk Jam',
+        type: '',
+        presenter: '',
+        description: 'Open jam session.  Come to play or listen.',
+        codes: [],
+        location: 'Susan B. Anthony',
+        sessionType: 'plenary',
+        plenary: true,
+      },
+      {
+        dateTime: 'Saturday, November 2, 8:30 - 9:45 AM',
+        title: 'Sectional Rehearsals',
+        type: '',
+        presenter: '',
+        description: '<ul><li>Mandolin 1 – Grand Ballroom E</li>' +
+          '<li>Mandolin 2 – Grand Ballroom A</li>' +
+          '<li>Mandola – Regency A</li>' +
+          '<li>Octave Mandolin – Regency C</li>' +
+          '<li>Mandocello – Grand Ballroom G</li>' +
+          '<li>Guitar - Susan B. Anthony</li></ul>',
+        codes: ['AI'],
+        location: '<i>location:</i> see description',
+        plenary: true,
+        sessionType: 'plenary',
       },
       {
         dateTime: 'Saturday, November 2, 10:00 – 11:15 AM',
@@ -320,6 +477,39 @@
         sessionType: 'workshop',
       },
       {
+        dateTime: 'Saturday, November 2, 11:30 AM - 1:00 PM',
+        title: 'Open Mic (Ensembles)',
+        type: '',
+        presenter: '',
+        description: '<a href="https://classicalmandolinsociety.org/open-mic-sign-up/" target="_blank">Sign up to perform on-line.</a>  Box-lunch reservations will be available here and on Yapp.',
+        codes: ['AI'],
+        location: 'Grand Ballroom B',
+        plenary: true,
+        sessionType: 'plenary',
+      },
+      {
+        dateTime: 'Saturday, November 2, 1:15 - 2:00 PM',
+        title: 'General Membership Meeting',
+        type: '',
+        presenter: '',
+        description: '',
+        codes: ['AI'],
+        location: 'Susan B. Anthony',
+        plenary: true,
+        sessionType: 'plenary',
+      },
+      {
+        dateTime: 'Saturday, November 2, 2:45 - 5:15 PM',
+        title: 'En Masse Orchestra Rehearsal #4',
+        type: '',
+        presenter: 'Dr. Jim Bates',
+        description: 'En Masse rehearsal led by Dr. Jim Bates.',
+        codes: [],
+        location: 'Grand Ballroom C',
+        sessionType: 'plenary',
+        plenary: true,
+      },
+      {
         dateTime: 'Saturday, November 2, 8:00 - 10:00 PM',
         title: 'Evening Concert',
         type: '',
@@ -344,6 +534,17 @@
           '</dl></div>',
         location: 'Grand Ballroom',
         sessionType: 'evening-performance',
+        plenary: true,
+      },
+      {
+        dateTime: 'Saturday, November 2, 10:30 PM -- ??',
+        title: 'After Party',
+        type: '',
+        presenter: '',
+        description: '',
+        codes: [],
+        location: 'Regency C',
+        sessionType: 'plenary',
         plenary: true,
       },
     ]
